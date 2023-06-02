@@ -78,12 +78,12 @@ async function fetchStats(videoId){
 
 function navigateToVideo(videoId){
 
-    let path = `/Youtube-Clone/video.html`;
+    let path = `/video.html`;
     if(videoId){
         document.cookie = `videoId=${videoId}; path = ${path}`
         let linkItem = document.createElement("a")
         linkItem.target = "_blank"
-        linkItem.href =  `http://127.0.0.1:5500/Youtube-Clone/video.html`;
+        linkItem.href =  `http://127.0.0.1:5500/video.html`;
         linkItem.click();
     }else{
         alert("go and watch in Youtube")
