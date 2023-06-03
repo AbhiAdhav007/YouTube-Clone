@@ -29,7 +29,7 @@ function onLoadScript(){
 
 const statsContainer = document.getElementsByClassName("video-details")[0]
 async function extractVideoDetails(videoId){
-    let endpoint = `https://www.googleapis.com/youtube/v3/commentThreads?part=snippet&id=${videoId}&key=${apiKey}`
+    let endpoint = `https://www.googleapis.com/youtube/v3/commentThreads?part=snippet&videoId=${videoId}&key=${apiKey}`
 
     try{
         let response = await fetch(endpoint);
@@ -52,7 +52,7 @@ async function fetchStats(videoId){
         const item = result.items[0];
         const title = document.getElementById("title")
         title.innerText = item.snippet.title;
-        console.log(item)
+        console.log(result)
         statsContainer.innerHTML = `
         <div class="profile">
         <img src="./download.jpeg" class="channel-logo" alt="">
