@@ -1,15 +1,16 @@
 let cookieString = document.cookie
 let videoId = cookieString.split("=")[1];
-
+console.log(videoId)
 const apiKey = "AIzaSyC0Q59jz2z406SBfNEBNCGrT1d2vwFu0-c"
 
 
 let firstScript = document.getElementsByTagName("script")[0];
-
 firstScript.addEventListener("load" , onLoadScript)
 
 function onLoadScript(){
+    
     if(YT){ 
+        
         new YT.Player("container" , {
             height : "400",
             width : "850", 
